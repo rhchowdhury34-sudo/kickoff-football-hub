@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101B24">
+  <meta name="description" content="KickOff — Your football world, all in one place.">
+  <title>KickOff — Football Hub</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="KickOff home">
+        <span class="brand-mark">K</span><span>Kick<span class="lime">Off</span></span>
+      </a>
+      <div class="top-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+        <button class="icon-btn" id="installBtn" aria-label="Install app" hidden>⇩</button>
+        <button class="avatar" aria-label="Profile">G</button>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <section class="hero">
+        <div class="hero-kicker"><span class="pulse-dot"></span> YOUR FOOTBALL CENTRAL</div>
+        <h1>The game<br><span class="lime">never stops.</span></h1>
+        <p>Scores, fixtures, leagues and stories — all in one place.</p>
+        <button class="primary-btn" data-go="Scores">Explore matches <span>→</span></button>
+        <div class="hero-ball" aria-hidden="true">⚽</div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow">DON'T MISS A MOMENT</p><h2>Match centre</h2></div>
+          <button class="text-btn" data-go="Scores">View all ↗</button>
+        </div>
+        <div class="filter-row" id="matchFilters">
+          <button class="chip active" data-filter="All">All</button>
+          <button class="chip" data-filter="Live">Live</button>
+          <button class="chip" data-filter="Upcoming">Upcoming</button>
+          <button class="chip" data-filter="Finished">Finished</button>
+        </div>
+        <div class="match-list" id="homeMatches"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow">FOLLOW THE BIGGEST</p><h2>Top leagues</h2></div>
+          <button class="text-btn" data-go="Leagues">All leagues ↗</button>
+        </div>
+        <div class="league-strip" id="homeLeagues"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div><p class="eyebrow">AROUND THE WORLD</p><h2>Latest stories</h2></div>
+          <button class="text-btn" data-go="News">More news ↗</button>
+        </div>
+        <div class="news-list" id="homeNews"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item selected" data-page="Home"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-page="Scores"><span>◉</span><small>Scores</small></button>
+      <button class="nav-item" data-page="Fixtures"><span>▦</span><small>Fixtures</small></button>
+      <button class="nav-item" data-page="Leagues"><span>♜</span><small>Leagues</small></button>
+      <button class="nav-item" data-page="News"><span>▤</span><small>News</small></button>
+    </nav>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
