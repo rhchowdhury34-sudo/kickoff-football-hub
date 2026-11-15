@@ -1,0 +1,23 @@
+{
+  "name": "KickOff Football Hub",
+  "short_name": "KickOff",
+  "description": "Your football world, all in one place.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#101B24",
+  "theme_color": "#101B24",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
